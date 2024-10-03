@@ -5,7 +5,7 @@ const getUserDetailsFromToken = require('../helpers/getUserDetailsFromToken')
 const UserModel = require('../models/UserModel')
 const { ConversationModel,MessageModel } = require('../models/ConversationModel')
 const getConversation = require('../helpers/getConversation')
-
+require('dotenv').config()
 const app = express()
 
 /***socket connection */
@@ -16,16 +16,6 @@ const io = new Server(server,{
         credentials : true
     }
 })
-
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', process.env.FRONTEND_URL);
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-    if (req.method === 'OPTIONS') {
-      res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
-      return res.status(200).json({});
-    }
-    next();
-  });
   
   app.use(cors({
     origin: process.env.FRONTEND_URL,
@@ -33,6 +23,7 @@ app.use((req, res, next) => {
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],  // Explicitly allow 'Content-Type' and 'Authorization'
   }));
+
 
 /***
  * socket running at http://localhost:8080/
