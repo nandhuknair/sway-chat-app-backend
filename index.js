@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const router = require('./routes/index')
 const cookiesParser = require('cookie-parser')
 const connectDB  = require('./config/connectDB')
@@ -6,6 +7,13 @@ const {app, server}  = require('./socket/index')
 require('dotenv').config()
 // const app = express()
 
+
+app.use(cors({
+  origin: "*",
+  methods: ["POST", "GET", "PUT", "DELETE"],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'], 
+}));
 
 
 app.use(express.json())

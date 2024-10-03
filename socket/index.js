@@ -11,15 +11,17 @@ const cors = require('cors')
 
 /***socket connection */
 const server = http.createServer(app)
+
 const io = new Server(server,{
     cors : {
-        origin : process.env.FRONTEND_URL,
-        credentials : true
+        origin : "*",
+        credentials : true,
+        allowedHeaders: ['Content-Type', 'Authorization'], 
     }
 })
   
   app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: "*",
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'], 
