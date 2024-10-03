@@ -10,19 +10,18 @@ const app = express()
 
 /***socket connection */
 const server = http.createServer(app)
-const io = new Server(server,{
-    cors : {
-        origin : process.env.FRONTEND_URL,
-        methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true,
-        allowedHeaders: ['Content-Type', 'Authorization'], 
-    }
-})
+
+const io = new Server(server, {
+    cors: {
+      origin: process.env.FRONTEND_URL,
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      credentials: true,
+      allowedHeaders: ['Content-Type', 'Authorization'],
+    },
+    transports: ['websocket', 'polling'],
+  });
   
 
-/***
- * socket running at http://localhost:8080/
- */
 
 //online user
 const onlineUser = new Set()
