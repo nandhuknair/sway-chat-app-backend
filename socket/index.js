@@ -7,26 +7,16 @@ const { ConversationModel,MessageModel } = require('../models/ConversationModel'
 const getConversation = require('../helpers/getConversation')
 require('dotenv').config()
 const app = express()
-const cors = require('cors')
 
 /***socket connection */
 const server = http.createServer(app)
-
 const io = new Server(server,{
     cors : {
-        origin : "*",
-        credentials : true,
-        allowedHeaders: ['Content-Type', 'Authorization'], 
+        origin : process.env.FRONTEND_URL,
+        credentials : true
     }
 })
   
-  app.use(cors({
-    origin: "*",
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'], 
-  }));
-
 
 /***
  * socket running at http://localhost:8080/
