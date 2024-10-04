@@ -5,7 +5,7 @@ Sway Chat App is a real-time chat application built using React for the frontend
 ## Features
 
 - **Real-time Messaging**: Instant communication between users using Socket.io.
-- **Dark & Light **: Implemented Dark and light mode with tailwind css.
+- **Dark & Light**: Implemented Dark and light mode with tailwind css.
 - **User-Friendly Interface**: Clean and responsive UI built with React.
 - **Rooms-based Chat**: Users can join different rooms for focused conversations.
 - **User Notifications**: Get notified when new messages are received.
