@@ -17,8 +17,8 @@ Sway Chat App is a real-time chat application built using React for the frontend
 - **Frontend**: React.js (JavaScript)
 - **Backend**: Node.js, Express
 - **Real-time Communication**: Socket.io
-- **Styling**: Tailwind CSS (or mention any other styling used)
-- **Deployment**: (e.g., Vercel, Heroku, etc.)
+- **Styling**: Tailwind CSS
+- **Deployment**: vercel and render(for backend)
 
 ## Getting Started
 
@@ -36,14 +36,20 @@ Make sure you have the following installed:
     ```bash
     git clone https://github.com/nandhuknair/sway-chat-app-frontend.git
     ```
+    
+2. **Clone the repository**:
 
-2. **Navigate to the project directory**:
+    ```bash
+    git clone https://github.com/nandhuknair/sway-chat-app-backend.git
+    ```
+
+3. **Navigate to the project directory**:
 
     ```bash
     cd client
     ```
 
-3. **Install dependencies for both frontend and backend**:
+4. **Install dependencies for both frontend and backend**:
 
     - Install frontend dependencies:
 
@@ -59,7 +65,7 @@ Make sure you have the following installed:
       npm install
       ```
 
-4. **Run the application**:
+5. **Run the application**:
 
     In the `server` directory, start the backend:
 
@@ -73,10 +79,7 @@ Make sure you have the following installed:
     npm start
     ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to access the chat app.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to access the sway.
 
-### Environment Variables
 
-Make sure to set up the following environment variables:
 
-- For backend:  
