@@ -27,7 +27,6 @@ Make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- (Optional) [Docker](https://www.docker.com/), if using containerized deployment
 
 ### Installation
 
