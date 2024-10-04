@@ -11,6 +11,10 @@
     { "source": "/(.*)", "destination": "/server.js" },
     { "source": "/socket.io/(.*)", "destination": "server.js" }
   ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" },
+    { "src": "/socket.io/(.*)", "dest": "server.js" }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
