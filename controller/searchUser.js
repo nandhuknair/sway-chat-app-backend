@@ -2,6 +2,7 @@ const UserModel = require('../models/UserModel')
 
 async function searchUser(request,response){
     try {
+        console.log('Entered to teh search user page !!!!!!!!!!')
         const { search } = request.body
 
         const query = new RegExp(search,"i","g")

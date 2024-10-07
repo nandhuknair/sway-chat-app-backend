@@ -3,7 +3,8 @@ const UserModel = require("../models/UserModel")
 
 async function updateUserDetails(request,response){
     try {
-        const token = request.cookies.token || ""
+        console.log('entered to the updateUserDetail Page!!!!!!!!')
+        const token = request.cookies.token || request.headers.authorization?.split(' ')[1] || "";
 
         const user = await getUserDetailsFromToken(token)
 
